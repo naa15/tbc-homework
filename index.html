@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TBC x Academy | თიბისი აკადემია</title>
-        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/reset.css">
         <link rel="stylesheet" href="./styles/fonts.css">
-        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
         <header>
@@ -34,6 +34,39 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+
+                <div class="bm-wrapper">
+                    <a href="https://www.tbcacademy.ge/"><img
+                            src="./assets/tbc-academy-logo.svg"
+                            alt="tbc academy logo"></a>
+                    <div class="burger-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <aside class="bm-nav">
+                        <nav class="burger-nav">
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.tbcacademy.ge/">მთავარი</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.tbcacademy.ge/it-academy">TBC
+                                        IT</a>
+                                </li>
+                                <li>
+                                    <a href="#">TBC x USAID</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.tbcacademy.ge/risks-academy">რისკები</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
                 </div>
             </div>
             <div class="hero">
@@ -184,25 +217,31 @@
                     <div class="carousel-container">
                         <div class="carousel">
                             <div class="slide">
-                                <img src="./assets/space-logo.png" alt="space-logo">
+                                <img src="./assets/space-logo.png"
+                                    alt="space-logo">
                             </div>
                             <div class="slide">
-                                <img src="./assets/usaid-logo.png" alt="usaid-logo">
+                                <img src="./assets/usaid-logo.png"
+                                    alt="usaid-logo">
                             </div>
                             <div class="slide">
-                                <img src="./assets/tbc-leasing-logo.png" alt="tbc-leasing logo">
+                                <img src="./assets/tbc-leasing-logo.png"
+                                    alt="tbc-leasing logo">
                             </div>
                             <div class="slide">
-                                <img src="./assets/tegeta-logo.png" alt="tegeta">
+                                <img src="./assets/tegeta-logo.png"
+                                    alt="tegeta">
                             </div>
                             <div class="slide">
-                                <img src="./assets/tineti-logo.png" alt="tineti">
+                                <img src="./assets/tineti-logo.png"
+                                    alt="tineti">
                             </div>
                             <div class="slide">
                                 <img src="./assets/ufc-logo.png" alt="ufc">
                             </div>
                             <div class="slide">
-                                <img src="./assets/spectre-logo.png" alt="spectre-logo">
+                                <img src="./assets/spectre-logo.png"
+                                    alt="spectre-logo">
                             </div>
                         </div>
                         <div class="nav-buttons">
@@ -376,6 +415,17 @@
             };
 
             setInterval(window.nextSlide, 3000);
+        });
+
+        const burgerMenu = document.querySelector(".burger-menu");
+        let isVisible = false;
+
+        burgerMenu.addEventListener("click", function () {
+            burgerMenu.classList.toggle("clicked");
+            isVisible = !isVisible;
+            const bmNav = document.querySelector(".bm-nav");
+            bmNav.style.right = isVisible ? "0" : "-80%";
+            darkOverlay.style.display = isVisible ? "block" : "none";
         });
         </script>
     </body>

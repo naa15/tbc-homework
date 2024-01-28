@@ -46,6 +46,10 @@ body {
     color: #00A3E0;
 }
 
+.bm-wrapper {
+    display: none;
+}
+
 .hero {
     background-image: url("../assets/hero.png");
     height: 22rem;
@@ -369,3 +373,172 @@ footer {
 .nav-buttons img:first-child {
     margin-left: 5rem;
 }
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+        max-width: unset;
+    }
+    .menu {
+        display: none;
+    }
+
+    .bm-wrapper {
+        display: block;
+    }
+
+    .navigation {
+        height: 10rem;
+    }
+
+    .bm-wrapper img {
+        padding: 2rem;
+    }
+    .hero {
+        margin-top: 10rem;
+        width: 100vw;
+        height: 22rem;
+        background-size: cover;
+        text-align: left;
+    }
+
+    .hero h2 span:first-child {
+        margin-right: 15rem;
+    }
+
+    .hero div {
+        padding-left: 2rem;
+    }
+
+    .intro {
+        padding: 2rem;
+    }
+
+    .courses-wrapper {
+        padding-left: 2rem;
+    }
+
+    .course-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-box {
+        width: 90vw;
+        height: unset;
+    }
+
+    .FAQ {
+        padding: 2rem;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        height: 26px;
+        width: 32px;
+        top: 30px;
+        right: 32px;
+        z-index: 25;
+        transition: all 0.33s ease-out;
+    }
+
+    .dark-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        background-color: #dbdbdb;
+        border-radius: 8.5px;
+        height: 4px;
+        transition: all 0.3s ease-out;
+    }
+
+    .line1 {
+        align-self: flex-start;
+        width: 50%;
+        transform-origin: right;
+    }
+
+    .line2 {
+        align-self: center;
+        width: 100%;
+    }
+
+    .line3 {
+        align-self: flex-end;
+        width: 50%;
+        transform-origin: left;
+    }
+
+    .burger-menu.clicked .line1 {
+        transform: translateY(0px) translateX(-10px) rotate(-135deg);
+        background-color: #8f8f8f;
+    }
+
+    .burger-menu.clicked .line2 {
+        transform: rotate(135deg);
+        background-color: #8f8f8f;
+    }
+
+    .burger-menu.clicked .line3 {
+        transform: translateY(-11px) rotate(45deg);
+        background-color: #8f8f8f;
+    }
+
+    .bm-nav {
+        display: block;
+        z-index: 20;
+        position: fixed;
+        padding: 11rem 1rem 0 0;
+        top: 0;
+        right: -85%;
+        width: 250px;
+        height: 100%;
+        background-color: #222222;
+        transition: right 0.3s ease-out;
+    }
+
+    .bm-nav nav {
+        float: right;
+    }
+
+    .bm-nav ul {
+        float: right;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .bm-nav li {
+        color:#F4F4F4;
+        font-size: 1.25rem;
+        padding-right: 3rem;
+    }
+
+    .bm-nav li:nth-child(3) {
+        color: #00A3E0;
+    }
+
+    .slider h3 {
+        padding-left: 2rem;
+    }
+
+    .FAQ .title a {
+        padding-right: 4rem;
+    }
+}
+
+
