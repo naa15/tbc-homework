@@ -53,8 +53,8 @@
 @font-face {
     font-family: 'TBC X';
     src: url('../fonts/TBCX-Regular_1.eot');
-    src: url('../fonts/../fonts/TBCX-Regular_1.eot') format('embedded-opentype'),
-        url('TBCX-Regular_1.woff2') format('woff2'),
+    src: url('../fonts/TBCX-Regular_1.eot') format('embedded-opentype'),
+        url('../fonts/TBCX-Regular.woff2') format('woff2'),
         url('../fonts/TBCX-Regular_1.woff') format('woff'),
         url('../fonts/TBCX-Regular_1.ttf') format('truetype'),
         url('../fonts/TBCX-Regular_1.svg') format('svg');
