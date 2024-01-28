@@ -259,7 +259,7 @@ footer {
 }
 
 .accordion:after {
-    content: url("../assets/upward-arrow.svg");
+    content: url("../assets/downward-arrow.svg");
     color: #777;
     font-weight: bold;
     float: right;
@@ -267,7 +267,7 @@ footer {
 }
 
 .active:after {
-    content: url("../assets/downward-arrow.svg");
+    content: url("../assets/upward-arrow.svg");
 }
 
 .panel {
